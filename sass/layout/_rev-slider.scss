@@ -220,3 +220,10 @@ iframe { border: 0; }
 .tp-caption span.color {
   color: #ffb30f;
 }
+
+.testimonial__body video {
+  width: 320px !important;  /* O el tamaño que prefieras */
+  height: auto !important;
+  max-width: 100%;  /* Para que sea responsive */
+  object-fit: cover; /* Opcional, para ajustar el video al tamaño sin deformarlo */
+}

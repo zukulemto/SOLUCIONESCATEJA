@@ -18,6 +18,7 @@
 /*-------------------------------------------------------*/
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 .clearfix {
@@ -3668,6 +3669,9 @@ figcaption {
 -------------------------------------------------------*/
 .logo {
   line-height: 1;
+  height: 30px;
+  width: auto;
+  margin: 0;
 }
 
 /* Nav Flexbox
@@ -4575,6 +4579,13 @@ iframe {
   color: #ffb30f;
 }
 
+.testimonial__body video {
+  width: 320px !important; /* O el tamaño que prefieras */
+  height: auto !important;
+  max-width: 100%; /* Para que sea responsive */
+  object-fit: cover; /* Opcional, para ajustar el video al tamaño sin deformarlo */
+}
+
 /*-------------------------------------------------------*/
 /* Footer
 /*-------------------------------------------------------*/
@@ -4587,6 +4598,7 @@ iframe {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #181818;
+  background-image: "imgportfolio�.-03.png";
 }
 .footer ul {
   margin: 0;
