@@ -427,6 +427,7 @@
 .ui-category:before { content: '\f097'; } /* '' */
 .ui-twitter:before { content: '\f099'; } /* '' */
 .ui-facebook:before { content: '\f09a'; } /* '' */
+.ui-facebook2:before { content: '\f09a'; color: white; } /* '' */
 .ui-github:before { content: '\f09b'; } /* '' */
 .ui-rss:before { content: '\f09e'; } /* '' */
 .ui-pinterest:before { content: '\f0d2'; } /* '' */
@@ -440,6 +441,7 @@
 .ui-dropbox:before { content: '\f16b'; } /* '' */
 .ui-stackoverflow:before { content: '\f16c'; } /* '' */
 .ui-instagram:before { content: '\f16d'; } /* '' */
+.ui-instagram2:before { content: '\f16d'; color: white;} /* '' */
 .ui-flickr:before { content: '\f16e'; } /* '' */
 .ui-bitbucket:before { content: '\f171'; } /* '' */
 .ui-tumblr:before { content: '\f173'; } /* '' */
