@@ -8,8 +8,14 @@
     $('.loader').fadeOut();
     $('.loader-mask').delay(350).fadeOut('slow');
 
+    if (shouldShowPopup()) {
+      setTimeout(togglePopup, 1500); // Muestra el popup con 1 segundo de retraso
+    }
+
     $window.trigger("resize");
   });
+
+ 
 
   // Init
   initMasonry();
@@ -20,6 +26,8 @@
     stickyNavRemove();
     hideSidenav();
   });
+
+  
 
 
   /* Detect Browser Size
@@ -324,4 +332,36 @@
     return false;
   });
 
+   /* 
+  -------------------------------------------------------*/
+
+  
+  $('.overlay, .close-btn, .boton').on('click', function() {
+    togglePopup();
+  });
+
+  function togglePopup() {
+    $('#popup-1').toggleClass('active');
+  }
+
+  function shouldShowPopup() {
+    const lastShown = localStorage.getItem('lastPopupShown');
+    const now = new Date();
+  
+    if (lastShown) {
+      const lastShownDate = new Date(lastShown);
+      const oneDay = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
+      if (now - lastShownDate < oneDay) {
+        return false; // Han pasado menos de 24 horas
+      }
+    }
+  
+    // Si no hay registro o ha pasado más de un día, actualizamos la fecha y mostramos el popup
+    localStorage.setItem('lastPopupShown', now);
+    return true;
+  }
+
 })(jQuery);
+
+
+

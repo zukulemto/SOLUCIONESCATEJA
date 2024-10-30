@@ -736,3 +736,144 @@ a.cc-btn.cc-dismiss {
     display: block;
   }
 }
+
+/*-------------------------------------------------------*/
+/* Popup
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/* Popup Mejorado
+/*-------------------------------------------------------*/
+
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup.active .overlay {
+  display: block;
+  opacity: 1;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #ffffff;
+  width: 500px;
+  max-width: 90%;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333;
+  font-family: $body-font;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.popup.active .content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: #ff5a5f;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup .close-btn:hover {
+  background: #ff3b3f;
+}
+
+.popup .content h1 {
+  margin: 0 0 15px;
+  font-size: 24px;
+  color: $main-color;
+}
+
+.popup .content p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px; /* Espaciado interno */
+  background-color: $main-color; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #009639; /* Color de fondo en hover */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+.boton:active {
+  transform: translateY(1px); /* Efecto de depresión al hacer clic */
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Sombra más suave al hacer clic */
+}
+
+.popup a {
+  color: #fff;
+}
+
+/* Estilo para el botón de "Regístrate" */
+.button-registro {
+  background-color: #00ae4c; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilo al pasar el cursor sobre el botón */
+.button-registro:hover {
+  background-color: #009e44; /* Color de fondo al pasar el cursor */
+  color: white;
+  transform: scale(1.05); /* Efecto de agrandado al pasar el cursor */
+}
+
+/* Estilo al hacer clic en el botón */
+.button-registro:active {
+  transform: scale(0.95); /* Efecto de clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reducida */
+}
