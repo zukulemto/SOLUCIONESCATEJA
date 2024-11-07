@@ -3,17 +3,17 @@
 
   var $window = $(window);
 
-  $window.on('load', function() {
-    // // Preloader
-    // $('.loader').fadeOut();
-    // $('.loader-mask').delay(350).fadeOut('slow');
+  
+    // Preloader
+    $('.loader').fadeOut();
+    $('.loader-mask').delay(350).fadeOut('slow');
 
     if (shouldShowPopup()) {
       setTimeout(togglePopup, 1500); // Muestra el popup con 1 segundo de retraso
     }
 
     $window.trigger("resize");
-  });
+
 
  
 
